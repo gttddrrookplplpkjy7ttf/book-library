@@ -3,12 +3,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const messageBox = document.getElementById("messageBox");
   const createAccountBtn = document.querySelector(".btn-create");
 
-  // ปุ่ม "Create new account" -> ไปหน้าสมัครสมาชิก
-  createAccountBtn.addEventListener("click", () => {
-    window.location.href = "/Frontend/signup.html";
-  });
+  // ✅ ตรวจว่าปุ่มมีอยู่จริงก่อน
+  if (createAccountBtn) {
+    createAccountBtn.addEventListener("click", () => {
+      console.log("🟦 Redirecting to signup.html...");
+      window.location.href = "signup.html"; // ✅ ปรับ path ให้ตรงจริง (ไม่ต้อง /Frontend ถ้าไฟล์อยู่โฟลเดอร์เดียวกัน)
+    });
+  } else {
+    console.warn("⚠️ ไม่พบปุ่ม .btn-create ในหน้า HTML");
+  }
 
-  // เมื่อกด SIGN IN
+  if (!form) {
+    console.error("❌ ไม่พบฟอร์ม id='signupForm'");
+    return;
+  }
+
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
@@ -31,20 +40,15 @@ document.addEventListener("DOMContentLoaded", () => {
       const data = await response.json();
 
       if (response.ok) {
-        // ✅ บันทึก token และ studentId ลง localStorage
         localStorage.setItem("token", data.token);
         localStorage.setItem("studentId", studentId);
-        window.location.href = "home.html";
-        
+
         messageBox.textContent = "เข้าสู่ระบบสำเร็จ กำลังเข้าสู่หน้า Home...";
         messageBox.style.color = "green";
 
-        // ไปหน้า home.html พร้อมส่งข้อมูลใน query string
-        // (จะได้เอาไปใช้ในหน้า home.html ได้ด้วย)
         setTimeout(() => {
-          const url = `/Frontend/home.html?studentId=${encodeURIComponent(studentId)}`;
-          window.location.href = url;
-        }, 1500);
+          window.location.href = "home.html";
+        }, 1000);
       } else {
         messageBox.textContent = data.message || "รหัสนักศึกษาหรือรหัสผ่านไม่ถูกต้อง";
         messageBox.style.color = "red";

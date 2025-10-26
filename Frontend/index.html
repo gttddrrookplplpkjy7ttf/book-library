@@ -1,109 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sripatum Library</title>
-  <link rel="stylesheet" href="index.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-  <!-- Header -->
-  <header class="hero-section">
-    <div class="nav-logo">
-      <img src="images/icon_Libraly.png" alt="SRIPATUM LIBRARY" />
-      <h3>SRIPATUM LIBRARY</h3>
-    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sripatum Library</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page">
+      <!-- ===== HERO (พื้นหลัง 2 สี 50/50) ===== -->
+      <section class="hero-wrap">
+        <!-- โลโก้มุมซ้ายบน -->
+        <header class="brand">
+          <img
+            src="images/icon_Libraly.png"
+            alt="SRIPATUM LIBRARY logo"
+            class="brand__logo"
+          />
+          <span class="brand__name">SRIPATUM LIBRARY</span>
+        </header>
 
-    <div class="hero-content">
-      <div class="hero-text">
-        <h1>Easy Study <br> Space Reservation</h1>
-        <p>An easy way to book a library seat or room, making studying simple and organized.</p>
-        <div class="btn-group">
-          <button class="btn primary ">SIGN IN</button>
-          <button class="btn secondary">SIGN UP</button>
+        <!-- เนื้อหา hero -->
+        <main class="hero">
+          <!-- ซ้าย -->
+          <div class="hero__left">
+            <h1 class="hero__title">
+              Library Space <br />
+              Reservation
+            </h1>
+            <p class="hero__desc">
+              An easy way to book a library seat or room, making studying simple
+              and organized.
+            </p>
+            <div class="btn-group">
+              <button type="button" class="btn btn--primary primary">SIGN IN</button>
+              <button type="button" class="btn btn--outline secondary">SIGN UP</button>
+            </div>
+          </div>
+
+          <!-- ขวา: รูป + กรอบ inset + รอยบาก -->
+          <div class="hero__right">
+            <div class="photo-card-inset">
+              <img
+                src="images/library-space.jpg"
+                alt="Library Space"
+                class="photo-card-inset__img"
+              />
+            </div>
+          </div>
+        </main>
+      </section>
+
+      <!-- พื้นหลังฟ้าด้านหลังแนวกล่อง (เฉพาะฝั่งขวา) -->
+      <div class="half-blue-bar" aria-hidden="true"></div>
+
+      <!-- ===== การ์ด 3 กล่อง ===== -->
+      <section class="feature-cards">
+        <article class="card card--light">
+          <img src="images/icon-live.png" alt="" class="card__icon" />
+          <div>
+            <h3 class="card__title card__title--blue">Live</h3>
+            <p class="card__text">ห้องเรียนสดได้ทุกที่</p>
+          </div>
+        </article>
+
+        <article class="card card--blue">
+          <img src="images/icon-smart.png" alt="" class="card__icon" />
+          <div>
+            <h3 class="card__title">Smart</h3>
+            <p class="card__text">แนะนำพื้นที่เหมาะกับคุณ</p>
+          </div>
+        </article>
+
+        <article class="card card--light">
+          <img src="images/icon-mobile.png" alt="" class="card__icon" />
+          <div>
+            <h3 class="card__title card__title--blue">Easy Mobile</h3>
+            <p class="card__text">จองง่ายบนทุกอุปกรณ์</p>
+          </div>
+        </article>
+      </section>
+
+      <!-- ===== รูป + ข้อความ ชุดล่าง ===== -->
+      <section class="split">
+        <!-- ซ้าย: รูป -->
+        <div class="split__media">
+          <div class="photo-card-inset photo-card-inset--shadow">
+            <img
+              src="images/library-small.jpg"
+              alt="Cozy Library"
+              class="photo-card-inset__img"
+            />
+          </div>
         </div>
-      </div>
-      <div class="hero-img">
-        <img src="images/library-space.jpg" alt="Library Room" />
-      </div>
-    </div>
-  </header>
 
-  <!-- Features -->
-  <section class="features">
-    <div class="feature-card">
-      <img src="images/icon-live.png" alt="Live" />
-      <span>Live ห้องเรียนสดได้ทุกที่</span>
-    </div>
-    <div class="feature-card smart">
-        <img src="images/icon-smart.png" alt="Smart" />
-        <span>Smart ระบบจองที่นั่งอัจฉริยะ</span>
-    </div>
-    <div class="feature-card">
-      <img src="images/icon-mobile.png" alt="Mobile" />
-      <span>Easy Mobile จองผ่านมือถือ</span>
-    </div>
-  </section>
+        <!-- ขวา: ข้อความ -->
+        <div class="split__text">
+          <p class="eyebrow">Welcome To SRIPATUM LIBRARY</p>
+          <h2 class="split__title">
+            Make the Most <br />
+            of Study Hours
+          </h2>
+          <p class="split__desc">
+            Take control of your study time with our simple library booking
+            system. Quickly find available rooms or seats that fit your
+            preferences and plan efficiently.
+            <br /><br />
+            Reserve the space that suits your learning style and enjoy a focused
+            environment. Whether it’s a quiet corner, a group room, or a
+            comfortable desk, studying becomes easier and more productive.
+          </p>
+          <button type="button" class="btn btn--primary btn--sm">JOIN</button>
+        </div>
+      </section>
 
-  <!-- Study Section -->
-  <section class="study-section">
-    <div class="study-img">
-      <img src="images/library-small.jpg" alt="Study Room" />
+      <!-- ===== 3-Layer Background + What We Offer ===== -->
+      <section class="stacked">
+        <!-- ชั้น 1: ฟ้าอ่อน -->
+        <section class="offer">
+          <div class="offer__inner">
+            <!-- ซ้าย: ข้อความ -->
+            <div class="offer__text">
+              <p class="eyebrow">What We Offer</p>
+              <h2 class="offer__title">
+                We help you choose <br />
+                the best space for <br />
+                your study.
+              </h2>
+              <p class="offer__para">
+                Finding the right study space can make your library time more
+                productive and focused.
+              </p>
+              <p class="offer__para">
+                We help you quickly locate and reserve seats or rooms that fit
+                your learning style. Whether you prefer a quiet corner, a group
+                room, or a comfortable desk, the right space helps you stay
+                organized and make the most of every study session.
+              </p>
+            </div>
+
+            <!-- ขวา: กล่องซ้อนแบบ cross -->
+            <div class="offer__grid">
+              <!-- กล่องน้ำเงินบน -->
+              <div
+                class="box box--blue box--top-right"
+                aria-hidden="true"
+              ></div>
+              <!-- กล่องน้ำเงินล่าง -->
+              <div
+                class="box box--blue box--bottom-right"
+                aria-hidden="true"
+              ></div>
+
+              <!-- กล่องข้อความทับ (บน-ซ้าย) -->
+              <div
+                class="box box--overlay box--top-right box--content box--content--white"
+              >
+                <h3>Room &amp; Seat<br />Booking</h3>
+                <p>
+                  จองห้องหรือที่นั่งได้รวดเร็ว<br />เลือกตามสไตล์การเรียนของคุณ
+                </p>
+              </div>
+
+              <!-- กล่องฟ้าอ่อน (ขวาบน) -->
+              <div class="box box--soft box--top-far">
+                <h3>Group &amp; Individual<br />Spaces</h3>
+                <p>
+                  จัดตารางเวลาเรียนให้มีประสิทธิภาพ<br />ใช้เวลาห้องสมุดอย่างคุ้มค่า
+                </p>
+              </div>
+
+              <!-- กล่องฟ้าอ่อน (ซ้ายล่าง) -->
+              <div class="box box--soft box--bottom-left">
+                <h3>Support &amp; Assistance</h3>
+                <p>
+                  ทีมงานพร้อมช่วยแก้ไขปัญหา<br />และแนะนำการใช้ทรัพยากรห้องสมุด
+                </p>
+              </div>
+
+              <!-- กล่องข้อความทับ (ขวาล่าง) -->
+              <div
+                class="box box--overlay box--bottom-right box--content box--content--white"
+              >
+                <h3>Group &amp; Individual<br />Spaces</h3>
+                <p>
+                  เลือกมุมเงียบ ห้องกลุ่ม<br />หรือโต๊ะส่วนตัว ตามความต้องการ
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ชั้น 2: เส้นคั่นสีขาว -->
+        <div class="separator" aria-hidden="true"></div>
+
+        <!-- ชั้น 3: ฟ้าเข้ม -->
+        <div class="deep-blue" aria-hidden="true"></div>
+      </section>
+
+      <footer class="footer">
+        &copy; 2025 Sripatum Library. All rights reserved.
+      </footer>
     </div>
-    <div class="study-text">
-      <h4>Welcome To SRIPATUM LIBRARY</h4>
-      <h2>Make the Most <br> of Study Hours</h2>
-      <p>Take control of your study time with our simple library booking system. Quickly find available rooms or seats that fit your preferences and plan efficiently.</p>
-      <p>Reserve the space that suits your learning style and enjoy a focused environment. Whether it’s a quiet corner, a group room, or a comfortable desk, studying becomes easier and more productive.</p>
-      <button class="btn primary">JOINY</button>
-    </div>
-  </section>
-
-    <!-- Offer Section -->
-    <section class="offer-section">
-  <div class="offer-container">
-    <!-- ด้านซ้าย -->
-    <div class="offer-text">
-      <h4>What We Offer</h4>
-      <h2>We help you choose <br> the best space for your study.</h2>
-      <p>Finding the right study space can make your library time more productive and focused.</p>
-      <p>
-        We help you quickly locate and reserve seats or rooms that fit your learning style. 
-        Whether you prefer a quiet corner, a group room, or a comfortable desk, 
-        the right space helps you stay organized and make the most of every study session.
-      </p>
-    </div>
-
-    <!-- ด้านขวา -->
-    <div class="offer-grid">
-      <div class="offer-card blue">
-        <h3>Room & Seat Booking</h3>
-        <p>จองห้องหรือที่นั่งได้รวดเร็ว เลือกตามสไตล์การเรียนของคุณ</p>
-      </div>
-      <div class="offer-card light">
-        <h3>Group & Individual Spaces</h3>
-        <p>จัดตารางเวลาเรียนให้มีประสิทธิภาพ ใช้เวลาห้องสมุดอย่างคุ้มค่า</p>
-      </div>
-      <div class="offer-card light">
-        <h3>Support & Assistance</h3>
-        <p>ทีมงานพร้อมช่วยแก้ปัญหาและแนะนำการใช้ทรัพยากรห้องสมุด</p>
-      </div>
-      <div class="offer-card blue">
-        <h3>Group & Individual Spaces</h3>
-        <p>เลือกมุมเงียบ ห้องกลุ่ม หรือโต๊ะส่วนตัว ตามความต้องการ</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-  <footer>
-    &copy; 2025 Sripatum Library. All rights reserved.
-  </footer>
-
-  <!-- ก่อนปิด </body> -->
-<script src="index.js"></script>
-
-</body>
+    <script src="index.js"></script>
+  </body>
 </html>

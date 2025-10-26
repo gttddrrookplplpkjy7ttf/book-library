@@ -3,46 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <title>Sign Up - Sripatum Library</title>
-  <link rel="stylesheet" href="/Frontend/sigup.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="sigup.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <!-- ฝั่งซ้าย -->
-    <div class="left-section">
-      <div class="white-box">
-        <div class="blue-square"></div>
-        <div class="form-box">
-          <div class="logo">
-            <img src="/Frontend/images/icon_Libraly.png" alt="Library Logo">
-            <h4>SRIPATUM<br>LIBRARY</h4>
-          </div>
+  <div class="background"></div>
 
-          <h2>Sign Up To Liberly</h2>
+  <div class="front-box">
+    <img src="images/library-sign.jpg" alt="Library" class="image">
+  </div>
 
-          <form id="signupForm">
-            <input type="text" id="name" placeholder="Username" required autocomplete="name">
-            <input type="text" id="studentId" placeholder="ID Card" required autocomplete="username">
-            <input type="password" id="password" placeholder="Password" required autocomplete="new-password">
-            <button type="submit">SIGN UP</button>
-            <p id="messageBox"></p>
-          </form>
-
-        </div>
+  <!-- กล่องสีขาวด้านบนสุด -->
+  <div class="white-box">
+    <div class="wb-inner">
+      <div class="wb-logo">
+        <img src="images/logo.png" alt="SRIPATUM LIBRARY" />
+        <span class="wb-brand">SRIPATUM<br>LIBRARY</span>
       </div>
-    </div>
 
-    <!-- ฝั่งขวา -->
-    <div class="right-section">
-      <div class="overlay"></div>
-      <div class="text-content">
-        <h1>Easy Study Space Reservation</h1>
-        <p>An easy way to book a library seat or room, making studying simple and organized.</p>
-      </div>
+      <!-- หัวข้อ -->
+      <h2 class="wb-title">Sign Up To Library</h2>
+
+      <!-- ฟอร์มสมัคร: ให้ตรงกับ backend.js -->
+      <form id="signupForm" class="wb-form" autocomplete="on">
+        <input id="name" type="text" name="username" placeholder="Username" autocomplete="name" />
+        <input id="studentId" type="text" name="studentId" placeholder="ID Card" autocomplete="off" />
+        <input id="password" type="password" name="password" placeholder="Password" autocomplete="new-password" />
+
+        <button type="submit" class="btn-primary">SIGN UP</button>
+
+        <!-- กล่องข้อความสำหรับแจ้งผล -->
+        <p id="messageBox" aria-live="polite" style="margin-top:10px;"></p>
+      </form>
     </div>
   </div>
 
-  <script src="signup.js"></script>
+  <!-- ข้อความใหญ่บนรูปภาพ (ด้านขวา) -->
+  <div class="hero-copy">
+    <h1>Easy Study Space<br>Reservation</h1>
+    <p>
+      An easy way to book a library seat or room, making studying simple
+      and organized.
+    </p>
+  </div>
 
+  <!-- ผูกสคริปต์ backend -->
+  <script src="signup.js"></script>
 </body>
 </html>
