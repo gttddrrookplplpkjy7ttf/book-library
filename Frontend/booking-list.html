@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>Library Booking</title>
+  <link rel="stylesheet" href="/Frontend/booking-list.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="logo">
+        <h2>SRIPATUM<br><span>LIBRALY</span></h2>
+      </div>
+      <div class="menu">
+        <h3>Service</h3>
+        <ul>
+          <li >การจองห้อง</li>
+          <li class="active" >รายการจองห้อง</li>
+          <li>ออกจากระบบ</li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Content -->
+    <main class="content">
+      <!-- User Info -->
+      <div class="user-info">
+        <p><strong>StudentID :</strong> <span id="idCard">-</span></p>
+        <p><strong>Username :</strong> <span id="username">-</span></p>
+      </div>
+
+      <!-- Booking List -->
+      <table class="booking-table">
+        <thead>
+          <tr>
+            <th>ชื่อห้อง</th>
+            <th>ผู้จอง</th>
+            <th>วันที่จอง</th>
+            <th>เวลา</th>
+            <th>แก้ไข</th>
+          </tr>
+        </thead>
+        <tbody id="bookingList">
+          <!-- JS จะดึงข้อมูลจาก API มาใส่ตรงนี้ -->
+        </tbody>
+      </table>
+
+      <!-- Modal Overlay -->
+        <div id="cancelModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>ยกเลิกการจอง?</h3>
+            <p>คุณต้องการยกเลิกการจองห้องนี้หรือไม่?</p>
+            <div class="modal-buttons">
+              <button id="confirmCancel" class="btn btn-danger">ยกเลิกการจอง</button>
+              <button id="cancelModalBtn" class="btn btn-secondary">ปิด</button>
+            </div>
+          </div>
+        </div>
+
+    </main>
+  </div>
+
+  <script src="booking-list.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign In - Sripatum Library</title>
+  <link rel="stylesheet" href="/Frontend/signin.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <!-- ฝั่งซ้าย -->
+    <div class="left-section">
+      <div class="white-box">
+        <div class="blue-square"></div>
+        <div class="form-box">
+          <div class="logo">
+            <img src="/Frontend/images/icon_Libraly.png" alt="Library Logo">
+            <h4>SRIPATUM<br>LIBRARY</h4>
+          </div>
+
+          <h2>Sign In To Liberly</h2>
+
+          <form id="signupForm">
+            <input type="text" id="studentId" placeholder="ID Card" required autocomplete="username">
+            <input type="password" id="password" placeholder="Password" required autocomplete="new-password">
+            
+            <button type="submit" class="btn-signin">SIGN IN</button>
+            <button type="button" class="btn-create">Create new account</button>
+
+            <p id="messageBox"></p>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ฝั่งขวา -->
+    <div class="right-section">
+      <div class="overlay"></div>
+      <div class="text-content">
+        <h1>Easy Study Space Reservation</h1>
+        <p>An easy way to book a library seat or room, making studying simple and organized.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="signin.js"></script>
+
+</body>
+</html>

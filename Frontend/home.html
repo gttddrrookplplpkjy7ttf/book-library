@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>Library Booking</title>
+  <link rel="stylesheet" href="/Frontend/home.css">
+</head>
+<body>
+
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="images/icon_Libraly.png" alt="logo">
+        <h2>SRIPATUM<br><span>LIBRALY</span></h2>
+      </div>
+      <div class="menu">
+        <h3>Service</h3>
+        <ul>
+          <li class="active">การจองห้อง</li>
+          <li id="bookingListBtn">รายการจองห้อง</li>
+          <li id="logout">ออกจากระบบ</li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Content -->
+    <main class="content">
+      <div class="user-info">
+        <p><strong>StudentID :</strong> <span id="idCard">-</span></p>
+        <p><strong>Username :</strong> <span id="username">-</span></p>
+      </div>
+
+
+      <div class="booking-form">
+        <h3>ข้อมูลการจองห้องสมุด</h3>
+        <form>
+          <div class="form-row">
+            <label>กรุณาเลือกชั้น</label>
+            <select id="floor">
+              <option value="ชั้น 1 อาคารหอสมุดกลาง" selected>ชั้น 1 อาคารหอสมุดกลาง</option>
+              <option value="ชั้น 2 อาคารหอสมุดกลาง">ชั้น 2 อาคารหอสมุดกลาง</option>
+              <option value="ชั้น 3 อาคารหอสมุดกลาง">ชั้น 3 อาคารหอสมุดกลาง</option>
+            </select>
+
+            <label>วันที่</label>
+            <input type="date" id="date">
+          </div>
+
+          <div class="form-row">
+            <label>เวลาเริ่มต้น</label>
+            <select id="startTime"></select>
+
+            <label>เวลาสิ้นสุด</label>
+            <select id="endTime"></select>
+
+            <label>ชั่วโมง</label>
+            <select id="hour">
+              <option value="1">1</option>
+              <option value="2" selected>2</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label>อุปกรณ์</label>
+            <div class="equipments">
+              <label><input type="radio" name="eq"> TV</label>
+              <label><input type="radio" name="eq"> สาย VGA</label>
+              <label><input type="radio" name="eq" checked> สาย HDMI</label>
+              <label><input type="radio" name="eq"> ชุดเครื่องเขียน</label>
+            </div>
+          </div>
+
+          <div class="form-row center">
+            <button type="button" id="submitBtn">Search</button>
+          </div>
+        </form>
+      </div>
+    </main>
+  </div>
+
+  <script src="/Frontend/home.js"></script>
+</body>
+</html>

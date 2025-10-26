@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>Library Booking</title>
+  <link rel="stylesheet" href="/Frontend/room.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="images/icon_Libraly.png" alt="logo">
+        <h2>SRIPATUM<br><span>LIBRALY</span></h2>
+      </div>
+      <div class="menu">
+        <h3>Service</h3>
+        <ul>
+          <li class="active">การจองห้อง</li>
+          <li>รายการจองห้อง</li>
+          <li>ออกจากระบบ</li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Content -->
+    <main class="content">
+      <!-- User Info -->
+      <div class="user-info">
+        <p><strong>StudentID :</strong> <span id="idCard">-</span></p>
+        <p><strong>Username :</strong> <span id="username">-</span></p>
+      </div>
+
+      <!-- Booking Form -->
+      <div class="booking-form">
+        <h3>ข้อมูลการจองห้องสมุด</h3>
+        <form>
+          <div class="form-row">
+            <label>กรุณาเลือกชั้น</label>
+            <input type="text" value="5">
+            <label>วันที่</label>
+            <input type="text" value="22/10/2568">
+          </div>
+
+          <div class="form-row">
+            <label>เวลาเริ่มต้น</label>
+            <select id="startTime"></select>
+
+            <label>เวลาสิ้นสุด</label>
+            <select id="endTime"></select>
+          </div>
+
+          <div class="form-row">
+            <label>ชั่วโมง</label>
+            <input type="text" id="hour" readonly>
+          </div>
+
+
+          <div class="form-row">
+            <label>อุปกรณ์</label>
+            <div class="equipments">
+              <label><input type="radio" name="eq"> TV</label>
+              <label><input type="radio" name="eq"> สาย VGA</label>
+              <label><input type="radio" name="eq" checked> สาย HDMI</label>
+              <label><input type="radio" name="eq"> ชุดเครื่องเขียน</label>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!-- Room List -->
+      <h3 class="section-title">รายการห้องสมุด</h3>
+      <div id="roomList"></div>
+      
+      <button class="btn-secondary" type="button" id="Backbtn">Back</button>
+    </main>
+  </div>
+
+  <!-- Popup Modal -->
+  <div class="modal" id="successModal">
+    <div class="modal-content">
+      <div class="icon">
+        <i>✔</i>
+      </div>
+      <p>The room reservation was successful.</p>
+      <div class="buttons">
+        <button class="btn-ok" id="okBtn">OK</button>
+        <button class="btn-cancel" id="cancelBtn">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="room.js"></script>
+</body>
+</html>
